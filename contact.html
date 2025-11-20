@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Sharshi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="Sharshi logo" class="logo">
+        <span class="brand-text">Sharshi</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Contact Us</h1>
+      <p class="lead">Let's collaborate. Send us a message and we'll reply shortly.</p>
+    </section>
+
+    <section class="contact-grid">
+      <div class="contact-card">
+        <h3>Office</h3>
+        <p>City, State, India</p>
+        <p>Email: <a href="mailto:info@sharshi.example">info@sharshi.example</a></p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+      </div>
+
+      <div class="contact-card form-card">
+        <h3>Send a message</h3>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <label>Name<input type="text" name="name" required></label>
+          <label>Email<input type="email" name="email" required></label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <p><button class="btn-primary" type="submit">Send</button></p>
+        </form>
+        <p class="note">Tip: replace the Formspree action with your own endpoint or email service.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Sharshi. All rights reserved.</div>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a> · <a href="#" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.querySelector('.menu-toggle').addEventListener('click', function(){
+  document.body.classList.toggle('nav-open');
+});
+</script>
+</body>
+</html>

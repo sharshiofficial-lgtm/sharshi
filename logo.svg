@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#d4af37"/>
+      <stop offset="1" stop-color="#b71c1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="24" fill="#fffaf6"/>
+  <g transform="translate(40,36)">
+    <circle cx="40" cy="40" r="36" fill="url(#g)" opacity="0.08"/>
+    <path d="M40 12 L52 44 L28 44 Z" fill="#b71c1c" opacity="0.95"/>
+    <path d="M12 76 C24 52,56 52,68 76 L40 86 Z" fill="#d4af37" opacity="0.95"/>
+    <text x="100" y="120" font-family="Segoe UI, Roboto, Arial" font-size="24" fill="#b71c1c">Sharshi</text>
+  </g>
+</svg>

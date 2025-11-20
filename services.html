@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Sharshi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="Sharshi logo" class="logo">
+        <span class="brand-text">Sharshi</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Our Services</h1>
+      <p class="lead">End-to-end offerings to turn ideas into real products and experiences.</p>
+    </section>
+
+    <section class="offerings-grid">
+      <div class="offering">
+        <h3>Product Engineering</h3>
+        <p>Hardware design, embedded software, and rapid prototyping.</p>
+      </div>
+      <div class="offering">
+        <h3>AI & Data Science</h3>
+        <p>Custom ML models, analytics pipelines and MLOps.</p>
+      </div>
+      <div class="offering">
+        <h3>Cloud & DevOps</h3>
+        <p>Scalable cloud architecture and CI/CD pipelines.</p>
+      </div>
+      <div class="offering">
+        <h3>Design & Brand</h3>
+        <p>Identity, UI/UX, and marketing assets aligned with your vision.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Sharshi. All rights reserved.</div>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a> · <a href="#" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.querySelector('.menu-toggle').addEventListener('click', function(){
+  document.body.classList.toggle('nav-open');
+});
+</script>
+</body>
+</html>
