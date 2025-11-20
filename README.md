@@ -1,8 +1,8 @@
-<img width="1024" height="1024" alt="ChatGPT Image Nov 20, 2025, 01_56_25 PM" src="https://github.com/user-attachments/assets/efa0d9e0-e34d-4b8f-9a67-0ed8fd66e62c" />Sharshi — Ready GitHub Pages website
+
 ==================================
 
 Files in this package:
-- index.html
+- index how are you .html
 - about.html
 - services.html
 - contact.html
