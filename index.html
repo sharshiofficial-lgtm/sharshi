@@ -1,97 +1,63 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sharshi </title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="logo.svg" alt="Sharshi logo" class="logo">
-        <span class="brand-text">Sharshi</span>
-      </a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <button class="menu-toggle" aria-label="menu">☰</button>
-    </div>
-  </header>
+import React from "react";
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Sharshi</h1>
-        <p class="lead">Where ancient values meet futuristic technology — powering sustainable, inspired innovation.</p>
-        <p><a class="btn-primary" href="services.html">Our Services</a> <a class="btn-secondary" href="contact.html">Contact Us</a></p>
-      </div>
-      <div class="hero-decor"></div>
-    </section>
-
-    <section class="overview container">
-      <div class="card">
-        <h3>Vision</h3>
-        <p>To build technologies rooted in cultural wisdom that uplift people and industries — blending spiritual symbolism with practical engineering.</p>
-      </div>
-      <div class="card">
-        <h3>Mission</h3>
-        <p>Design forward-looking products and services that are reliable, beautiful, and ethically built.</p>
-      </div>
-      <div class="card">
-        <h3>Values</h3>
-        <p>Integrity • Innovation • Prosperity • Balance</p>
-      </div>
-    </section>
-
-    <section class="services-preview">
-      <div class="container">
-        <h2>Key Capabilities</h2>
-        <div class="services-grid">
-          <div class="service">
-            <h4>AI & Automation</h4>
-            <p>Scalable solutions that make operations smarter and faster.</p>
+export default function Home() {
+  return (
+    <div className="min-h-screen w-full bg-gradient-to-b from-[#2B0000] to-black text-white">
+      {/* Header */}
+      <header className="p-6 flex justify-between items-center">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-orange-500 to-red-700 flex items-center justify-center text-black font-extrabold text-xl shadow-md border border-white/20">
+            श
           </div>
-          <div class="service">
-            <h4>IoT & Embedded Systems</h4>
-            <p>Compact hardware and firmware to power next-generation devices.</p>
-          </div>
-          <div class="service">
-            <h4>Design & Branding</h4>
-            <p>Identity, UI/UX and product design inspired by tradition and modernism.</p>
-          </div>
+          <h1 className="text-6xl font-extrabold tracking-[0.2em] bg-gradient-to-r from-yellow-300 via-orange-400 to-red-600 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(255,160,80,0.9)] animate-pulse-slow uppercase">
+            S H A S H R S H I
+          </h1>
         </div>
-      </div>
-    </section>
+      </header>
 
-    <section class="cta container">
-      <h3>Ready to begin?</h3>
-      <p>Schedule a consultation or drop us a message — let’s turn ideas into products.</p>
-      <p><a class="btn-primary" href="contact.html">Get in touch</a></p>
-    </section>
-  </main>
+      {/* Navigation Panel (fixed bottom) */}
+      <nav aria-label="Primary navigation" className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-black/50 backdrop-blur-md px-4 py-2 rounded-full flex gap-6 items-center border border-white/10 shadow-lg animate-bounce">
+        <a href="#home" className="hover:text-orange-400 transition">Home</a>
+        <a href="#products" className="hover:text-orange-400 transition">Products</a>
+        <a href="#services" className="hover:text-orange-400 transition">Services</a>
+        <a href="#contact" className="hover:text-orange-400 transition">Contact</a>
+      </nav>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© 2025 Sharshi. All rights reserved.</div>
-      <div class="socials">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a> · <a href="#" aria-label="Twitter">Twitter</a>
+      {/* Heritage Decorative Line */}
+      <div className="w-full flex justify-center mt-2 mb-6">
+        <div className="h-1 w-3/4 bg-gradient-to-r from-orange-500 via-yellow-300 to-red-600 rounded-full shadow-[0_0_15px_rgba(255,180,80,0.7)]"></div>
       </div>
+
+      {/* Hero Section */}
+      <section className="px-8 py-20 text-center">
+        <h2 className="text-5xl font-bold mb-4 text-white">
+          Welcome to a Modern Indian Futuristic Experience
+        </h2>
+        <p className="text-lg opacity-80 max-w-2xl mx-auto">
+          Blending ancient Indian heritage with futuristic digital design.
+        </p>
+      </section>
+
+      {/* Features */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 max-w-5xl mx-auto">
+        <div className="bg-white/10 p-6 rounded-2xl backdrop-blur border border-white/10">
+          <h3 className="text-2xl font-bold mb-2">Authenticity</h3>
+          <p className="opacity-80">Design inspired by traditional Indian art & culture.</p>
+        </div>
+
+        <div className="bg-white/10 p-6 rounded-2xl backdrop-blur border border-white/10">
+          <h3 className="text-2xl font-bold mb-2">Futuristic Vision</h3>
+          <p className="opacity-80">Modern aesthetics blended with heritage identity.</p>
+        </div>
+
+        <div className="bg-white/10 p-6 rounded-2xl backdrop-blur border border-white/10">
+          <h3 className="text-2xl font-bold mb-2">Creative Excellence</h3>
+          <p className="opacity-80">Delivering premium-quality digital creations.</p>
+        </div>
+      </section>
+
+      {/* Spacer to avoid overlap with fixed nav */}
+      <div className="h-28" />
     </div>
-  </footer>
-
-<script>
-document.querySelector('.menu-toggle').addEventListener('click', function(){
-  document.body.classList.toggle('nav-open');
-});
-const yearEl = document.querySelector('.site-footer div');
-if (yearEl) {
-  yearEl.innerHTML = '© ' + new Date().getFullYear() + ' Sharshi. All rights reserved.';
+  );
 }
-</script>
-</body>
-</html>
