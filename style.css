@@ -1,64 +1,67 @@
-/* Sharshi — Lakshmi Gold + Red theme, responsive, simple */
-:root{
-  --blue: #d4af37;
-  --red: #b71c1c;
-  --bg: #fffaf6;
-  --muted: #666;
-  --container: 1100px;
+/* Background Gradient */
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #000000, #4b0000);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
 }
-*{box-sizing:border-box}
-body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:#222; background:var(--bg); -webkit-font-smoothing:antialiased}
-.container{max-width:var(--container); margin:0 auto; padding:24px}
-.site-header{background:linear-gradient(90deg, rgba(212,175,55,0.06), rgba(183,28,28,0.02)); position:sticky; top:0; z-index:50; border-bottom:1px solid rgba(0,0,0,0.04)}
-.header-inner{display:flex; align-items:center; justify-content:space-between; gap:16px}
-.brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
-.logo{width:52px; height:52px}
-.brand-text{font-weight:700; font-size:20px; color:var(--red)}
-.nav{display:flex; gap:18px}
-.nav a{color:var(--muted); text-decoration:none; padding:12px 8px; border-radius:8px}
-.nav a:hover{color:var(--red); background:rgba(183,28,28,0.03)}
-.menu-toggle{display:none; background:none; border:0; font-size:22px}
 
-/* Hero */
-.hero{display:flex; align-items:center; justify-content:space-between; gap:24px; padding:60px 24px; background:linear-gradient(180deg, rgba(212,175,55,0.04), rgba(183,28,28,0.02)); border-bottom:1px solid rgba(0,0,0,0.04)}
-.hero .container{display:flex; align-items:center; justify-content:space-between; gap:24px}
-.hero h1{font-size:44px; margin:0; color:var(--red)}
-.lead{color:#333; margin:12px 0 18px; font-size:18px}
-.btn-primary{background:var(--red); color:white; padding:10px 16px; border-radius:8px; text-decoration:none}
-.btn-secondary{border:2px solid var(--gold); color:var(--gold); padding:8px 14px; border-radius:8px; text-decoration:none}
+/* Centered Text Content */
+.content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
-/* Cards */
-.overview{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; padding:40px 24px}
-.card{background:white; padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.04)}
-.services-preview{padding:40px 0}
-.services-grid{display:flex; gap:18px; flex-wrap:wrap}
-.service{flex:1; min-width:220px; background:white; padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.content h1 {
+    font-size: 3em;
+    margin: 0;
+}
 
-/* CTA */
-.cta{background:linear-gradient(90deg, rgba(212,175,55,0.06), rgba(183,28,28,0.02)); padding:28px; border-radius:12px; margin:28px 0; text-align:center}
+.content p {
+    font-size: 1.3em;
+    opacity: 0.8;
+}
 
-/* Footer */
-.site-footer{border-top:1px solid rgba(0,0,0,0.04); padding:18px 0; margin-top:40px}
-.footer-inner{display:flex; justify-content:space-between; align-items:center; gap:12px; color:var(--muted)}
+/* Falling Leaves */
+.leaves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
 
-/* Pages */
-.page-intro{padding:36px 0}
-.team-grid{display:flex; gap:18px}
-.member{background:white; padding:16px; border-radius:10px; text-align:center; min-width:160px}
-.avatar{width:64px; height:64px; border-radius:50%; background:var(--gold); color:white; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-weight:700}
+.leaf {
+    position: absolute;
+    top: -10%;
+    font-size: 2rem;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
 
-/* Contact */
-.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px}
-.contact-card{background:white; padding:18px; border-radius:10px}
-.form-card label{display:block; margin-bottom:10px}
-.form-card input,.form-card textarea{width:100%; padding:8px; margin-top:6px; border-radius:8px; border:1px solid #ddd}
+/* Random positions for each leaf */
+.leaf:nth-child(1) { left: 10%; animation-duration: 6s; }
+.leaf:nth-child(2) { left: 30%; animation-duration: 7.5s; }
+.leaf:nth-child(3) { left: 50%; animation-duration: 5.5s; }
+.leaf:nth-child(4) { left: 70%; animation-duration: 8s; }
+.leaf:nth-child(5) { left: 85%; animation-duration: 6.8s; }
+.leaf:nth-child(6) { left: 20%; animation-duration: 7s; }
 
-/* Responsive */
-@media(max-width:900px){
-  .overview{grid-template-columns:1fr; padding:20px}
-  .team-grid{flex-direction:column}
-  .contact-grid{grid-template-columns:1fr}
-  .nav{display:none}
-  .menu-toggle{display:block}
-  body.nav-open .nav{display:flex; position:absolute; top:64px; right:16px; flex-direction:column; background:white; padding:12px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+/* Falling animation */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
 }
